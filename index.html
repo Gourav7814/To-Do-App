@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0a0a23] min-h-screen flex items-center justify-center text-white p-4 font-sans">
+  <div class="w-full max-w-xl p-6 rounded-xl bg-[#1c1c3c] shadow-2xl relative border border-[#6c5ce7]">
+
+    
+    <div class="bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl p-4 mb-6 flex justify-between items-center shadow-md">
+      <div>
+        <h1 class="text-3xl font-bold text-white drop-shadow-md">VisionList</h1>
+        <p class="text-sm text-white opacity-80">Keep it up!</p>
+        <div class="w-full h-2 mt-2 bg-white bg-opacity-20 rounded-full">
+          <div id="progress-bar" class="h-full bg-white rounded-full transition-all duration-300 ease-in-out" style="width: 0%;"></div>
+        </div>
+      </div>
+      <div class="w-12 h-12 bg-white bg-opacity-20 text-white font-bold text-lg rounded-full flex items-center justify-center backdrop-blur-md" id="task-count">
+        0 / 0
+      </div>
+    </div>
+
+    <div class="flex gap-2 mb-4">
+      <input id="task-input" type="text" placeholder="Write your task..." class="flex-1 p-3 rounded-lg bg-[#2c2c54] text-white border border-[#6c5ce7] focus:outline-none" />
+      <button id="add-task" class="bg-[#6c5ce7] hover:bg-[#5e54e7] p-3 px-4 rounded-lg shadow">➕</button>
+    </div>
+
+    <ul id="task-list" class="space-y-3"></ul>
+  </div>
+
+  <script src="script.js"></script>
+<div id="bottom-popup" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-400 to-lime-500 text-black font-semibold px-6 py-3 rounded-full shadow-lg text-sm hidden z-50 transition-all duration-500">
+  ✅ Today's all tasks completed!
+</div>
+
+
+</body>
+
+
+</html>
